@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📝 프로젝트 기획서
+1. 프로젝트명
+금융 뉴스 요약 및 인사이트 자동 블로그
 
-## Getting Started
+2. 프로젝트 목적
+매일 쏟아지는 방대한 금융 뉴스 중에서 중요한 내용을 AI가 자동으로 요약하고, 데이터 분석을 통해 시장의 심리(상승/하락/중립)를 시각화하여 제공한다.
 
-First, run the development server:
+3. 핵심 기능 (요구사항)
+[데이터 수집]: RSS 피드 또는 금융 뉴스 크롤링을 통해 매일 최신 기사 10개를 자동 수집한다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[AI 자동 생성]: 수집된 뉴스 기사를 AI(OpenAI API 등)를 활용하여 3줄 요약하고 핵심 키워드를 추출한다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[데이터 분석/시각화]: 추출된 키워드와 감성 분석 결과를 차트로 시각화하여 사용자가 한눈에 시장 분위기를 파악하게 한다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[데이터베이스 저장]: 위 모든 처리 과정을 Supabase에 저장하여 웹 대시보드에서 조회할 수 있게 한다.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. 개발 스택 (기술 스택)
+Frontend: Next.js
 
-## Learn More
+Backend/DB: Supabase (PostgreSQL)
 
-To learn more about Next.js, take a look at the following resources:
+AI/분석: OpenAI API (요약 및 인사이트 추출)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployment: Vercel
